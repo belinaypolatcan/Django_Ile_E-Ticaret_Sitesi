@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}">Pinti
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Gezinmeyi aç/kapat">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'notebooks' %}">Notebooks</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" action="/search">
+            <h3 class="my-4 border-bottom pb-1
+            <span class="text-muted">Search result for </span> {{requests.GET.q}} 
+        </h3>
+          <input class="form-control me-2" name="q" type="search" placeholder="Arama" aria-label="Arama"  >
+          <button class="btn btn-outline-light" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arama</font></font></button>
+        </form>
+      </div>
+    </div>
+  </nav>
